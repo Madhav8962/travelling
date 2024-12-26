@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com">
+   </script>
+    <title>Document</title>
+</head>
+<body class="overflow-x-hidden">
+    <nav class="p-2 flex justify-between items-center">
+        <a  href="#">
+            <img src="./assets/img1.webp" alt="logo" class="object-cover max-h-28 px-6">
+            
+        </a>
+        
+        <div class="hidden lg:flex gap-12 lg:items-center">
+            <div class=" flex items-center gap-x-4"><a class="font-medium hover:text-blue-600 text-xl " href="#" onmouseover="mini()">Insurance</a>
+                <i  class="fa-solid fa-caret-down dropDown"></i>
+            </div>
+            <div class=" flex items-center gap-x-4">
+                <a class="font-medium hover:text-blue-600 text-xl" href="#" onmouseover="mini()">Resources & Support</a>
+            <i class="fa-solid fa-caret-down dropDown"></i>
+            </div>
+            <div class=" flex items-center gap-x-4">
+                <a class="font-medium hover:text-blue-600 text-xl" href="#" onmouseover="mini()">Agent/Producer</a>
+            <i class="fa-solid fa-caret-down dropDown"></i>
+            </div>
+
+            
+            
+              
+    
+        </div>
+        <div class="hidden lg:flex gap-12 pr-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-phone opacity-80"></i>
+                <a href="">Contact</a>
+
+            </div>
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-user opacity-80"></i>
+            <a href="">Account</a>
+        </div>
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass opacity-80"></i>
+            <a href="">Search</a>
+        </div>
+        </div>
+
+
+        <button class=" p-2 lg:hidden" onclick="handlemenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+        <div id="nav-dialog" class=" hidden fixed z-10 inset-0 p-2  bg-white lg:hidden">
+            <div class="flex justify-between  ">
+                <a class="flex gap-2 items-center" href="#">
+                    <img src="./assets/img1.webp" alt="logo" class="object-cover max-h-28 px-6">
+                    
+                </a>
+                <button class=" p-2 lg:hidden" onclick="handlemenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a class="text-violet-950 opacity-80 text-4xl font-medium p-3 m-3 rounded-lg block hover:bg-gray-50" href="#">Insurance</a>
+                <a class="text-violet-950 opacity-80 text-4xl font-medium p-3 m-3 rounded-lg block hover:bg-gray-50" href="#">Resources & Support</a>
+                <a class="text-violet-950 opacity-80 text-4xl font-medium p-3 m-3 rounded-lg block hover:bg-gray-50" href="#">Agent/Producer</a>
+                <div class="h-0.5 bg-gray-300"></div>
+                <div class="text-2xl flex gap-3 items-center p-4">
+                    <i class="fa-solid fa-phone opacity-80"></i>
+                <a class="font-medium p-3 m-3 rounded-lg block hover:bg-gray-50" href="#">8962732558</a>
+                </div>
+                <a class="text-2xl font-medium px-3 m-3 mt-1 rounded-lg block hover:bg-gray-50" href="#">Login</a>
+        
+            </div>
+           
+         </div>
+    </nav>
+    <div id="navDetail" class=" hidden  z-10 inset-0 p-2 bg-white  absolute mt-28 h-96 shadow-lg">
+        <div class="p-4  pt-10 flex gap-x-24">
+            <div>
+                <h2 class="text-6xl text-violet-950 opacity-70 font-medium">Insurance</h2>
+                <h3 class="text-2xl mt-5 font-medium">Who's Traveling</h3>
+                <h5 class="text-xl text-orange-600 hover:text-gray-700 font-semibold mt-3">U.S. Citizen or Resident <span class="px-2"><i class="fa-solid fa-arrow-right "></i></span></h5>
+                <h5 class="text-xl text-orange-600 hover:text-gray-700 font-semibold mt-3">Non-U.S. Citizen or Resident<span class="px-2"><i class="fa-solid fa-arrow-right "></i></span></h5>
+                <h5 class="text-xl text-orange-600 hover:text-gray-700 font-semibold mt-3">International Student  <span class="px-2"><i class="fa-solid fa-arrow-right "></i></span></h5>
+                <h5 class="text-xl text-orange-600 hover:text-gray-700 font-semibold mt-3">Digital Nomad <span class="px-2"><i class="fa-solid fa-arrow-right "></i></span></h5>
+            </div>
+
+<div class="flex gap-8  border-l-2 border-black">
+            <div class="ml-6">
+                <h3 class="text-2xl mt-5 font-medium text-violet-950 opacity-70">Who's Traveling</h3>
+                <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">U.S. Citizen or Resident </h5>
+                <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">Non-U.S. Citizen or Resident</h5>
+                <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">International Student  </h5>
+                <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">Digital Nomad </h5>
+            </div>
+            <div> 
+                <div>
+                    <h3 class="text-2xl mt-5 font-medium text-violet-950 opacity-70">Who's Traveling</h3>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">U.S. Citizen or Resident </h5>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">Non-U.S. Citizen or Resident</h5>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">International Student  </h5>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">Digital Nomad </h5>
+                </div> 
+            </div>
+            <div>
+                <div>
+                    <h3 class="text-2xl mt-5 font-medium text-violet-950 opacity-70">Who's Traveling</h3>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">U.S. Citizen or Resident </h5>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">Non-U.S. Citizen or Resident</h5>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">International Student  </h5>
+                    <h5 class="text-xl hover:text-orange-600 text-gray-700 font-semibold mt-3">Digital Nomad </h5>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <main>
+        <div id="heading1" class="bg-slate-100 w-full">
+            <div>
+                <div class="px-3 py-4 lg:px-12">
+                    <h2 class="text-xl lg:text-3xl hover:underline w-fit cursor-pointer">Resources <span class="px-3">|</span> <span class="font-light">List & Tips</span></h2>
+                    <h2 class="text-3xl my-4  font-medium lg:text-5xl text-violet-950 opacity-70">Best Travel Websites</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row">
+            <div id="left" class="flex flex-col gap-4 lg:w-2/3">
+                <img src="assets/img2.webp" alt="" class="object-cover w-auto px-4 my-4 lg:px-12">
+                <p class="px-4 my-4 lg:px-12 text-lg">Close your eyes and imagine being in a place you’ve always wanted to visit. What if you could make that dream a reality? Knowing how to plan and use travel websites can help make a dream trip possible.</p>
+                
+                
+                <p class="px-4 my-2 lg:px-12 text-lg">We’re going to give you all the best travel websites that specialize in getting you the best rates. You’ll discover the top 10 travel websites to browse for flights, hotels, and unique destinations, learn about the best international travel websites, the best travel websites in Europe, and more.</p>
+               
+               <p class=" px-4 my-2 lg:px-12 text-lg">Let’s start with the top 10 best travel websites 2023 has to offer for great deals:</p>
+
+               <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Booking</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg">On <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">this site</span>, you can get discounts on almost anything, including flights, hotel, cars, activities, and more.
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Expedia</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg">One of the most well-known travel websites in the world, <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">Expedia</span> has a robust rewards program with amenities and discounts you won’t find anywhere else.
+
+            </p>
+             <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Kayak</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg"><span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">Kayak</span> offers some of the best deals, with rates on full packages, restaurants, cruises, hotels, flights, and rental cars.
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Scott’s Cheap Flights</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg">This <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">website</span> is a little different. It offers an email list that tracks flights and their prices. If there is a change in prices, you’ll get an email with information that could save you a lot of money.
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Tripadvisor</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg">You’ll find all the information you need with reviews to help you with booking. Have a question about the best way to get from the airport to your hotel? Or whether to choose an all-inclusive option? You’ll find the answer on the <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">travel forum. Tripadvisor</span> is an all-in-one solution.
+
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Priceline</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg"><span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">Priceline</span> finds multiple options for hotels, flights, cruises, and rental cars. <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">“Bundle and save” vacation packages</span> are attractive, along with their express deals.
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Orbitz</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg"><span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">Orbitz</span> has a reward program that helps with bookings. The site also offers a credit card and dining program.
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Hotwire</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg">Bundling everything is the draw <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">with this site</span>. That’s where you’ll save money. If your schedule is flexible, book a <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">“Hot Rate” flight</span>. You won’t know which airline you’re on or your exact flight time until after you book, but you’ll get an unbeatable price.
+            </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Hotels</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">You can get <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">amazing daily deals on hotels</span> that are up to half off the average cost. There is free cancellation on most hotels, and most rooms allow you to pay now or later. This site also has last-minute deals and a rewards program.
+              </p>
+            <div class="px-4 my-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Google Flights</h5>
+               </div>
+               <p class=" px-4  lg:px-12 text-lg">Search for <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">the best airfares</span> across all airlines and track prices. You can also book vacation packages and hotel stays.
+            </p>
+            <h2 class="px-3 py-4 lg:px-12 text-3xl my-4  font-medium lg:text-5xl text-violet-950 opacity-70">Unique Travel Websites</h2>
+            <p class=" px-4  lg:px-12 text-lg">If you’re into experiences, doing something off the beaten path is where you might thrive. All over the world, there are places that cater to travelers who are looking for excitement and stories they’ll remember for the rest of their lives.</p>
+            <p class=" px-4  lg:px-12 text-lg">Luckily, there are many unique travel websites designed to accommodate travelers who want something different. Here is a list of travel websites that are worth looking into:</p>
+            <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">UnusualHotelsOfTheWorld.com</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> site helps travelers find unique hotel accommodations </span>for memorable experiences. What makes it unique is that it offers travel ideas, events, and immersion into some of the most unlikely places in the world, including treehouses, igloos, caves, and more
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">AtlasObscura.com</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This site helps people <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> plan trips to some of the world’s most unique spaces and places </span> on the planet. It offers a membership option and courses that help with immersion into the experiences.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">BlackTomato.com</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> site has many different once-in-a-lifetime experiences </span> that may be weird to some, but fun to others. This includes building an igloo in Greenland, walking with gorillas in Rwanda, and so much more. For travelers looking for an unusual story to tell years from now, this site can help.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">PrestigeOnline.com</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> site highlights travel and luxe living </span> but lists 12 unique and unusual places to stay around the world that will appeal to all your senses. Luxury resorts underwater or capsule suites hanging from cliffs are just some of the experiences you can enjoy.
+              </p>
+              <h2 class="px-3 py-4 lg:px-12 text-3xl my-4  font-medium lg:text-5xl text-violet-950 opacity-70">Best Travel Websites for Hotels</h2>
+              <p class=" px-4  lg:px-12 text-lg">When you’re planning a trip, you always think about where you are going to lay your head. For many people, hotel accommodations are one of the most important parts of the entire trip. Knowing where to find the best sites for hotel deals can save time, money, and keep you happy. Here is a list of the best travel websites for hotels:</p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Google Hotels</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This site will <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  help you compare pricing and listings.</span> You can use the hotel page integrated with Google Maps or type in “hotel” and your destination and results will come right up. It also offers suggestions for booking and gives neighborhood summaries.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Kayak Hotels</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This easy interface <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  shows multiple types of accommodations and total prices.</span> It offers a lot of information based on type, including resorts, guest houses, rentals, and hotels.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Booking</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This is good for <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> finding multiple accommodations at one time.</span> The site also has filters for family-friendly vacations, solo travelers, types of accessibility for the hotels, and different types of lodging.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Hotels</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This site lives up to its name, with  <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> hotels and many different types of lodging,</span> including the unique. The interface is quick and easy to navigate and offers hotels with free cancellation.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Priceline</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">When you’re looking for last-minute hotel deals,  <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> Priceline</span> is one of the best hotel websites 2023 has to offer. One of the most popular sites in this category, it has a steep discount finder, sends alerts when properties have lower than average prices, and showcases express deals and price breakers.
+              </p>
+              <h2 class="px-3 py-4 lg:px-12 text-3xl my-4  font-medium lg:text-5xl text-violet-950 opacity-70">BEST TRAVEL WEBSITES FOR FLIGHTS</h2>
+              <p class=" px-4  lg:px-12 text-lg">With travel largely back to normal, finding cheap flights is high on the priority list for many travelers. Airlines have capitalized on travelers wanting to get out and go, causing airline tickets to be much higher than normal.</p>
+              <p class=" px-4  lg:px-12 text-lg">For individuals wanting to travel, finding the best travel websites for flights makes a difference. Here are the top picks:</p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Momondo</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg"> <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> Momondo Flights </span> is simple and easy to use, with robust tracking tools and mix-and-match fares.
+
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Kayak Flights</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">Travelers can use <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  Kayak </span>to find prices from many different airlines at the same time to find the cheapest one. They also have hacker fares that bundle two one-way tickets instead of one roundtrip, which is usually cheaper.
+
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Expedia Flights</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This is a <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  tried-and-true solution for flights</span>—and it has a rewards program! Travelers can search online or through the app.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Skyscanner Flights</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This site doesn’t sell flights but <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  displays a listing of flight availability and their pricing</span> which makes it easier for the traveler to compare
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Google Flights</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg"> <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> Google Flights</span> is a metasearch engine. When you locate the flight you want, the system will redirect you to the airline’s website to complete your purchase. You can also see trends and track the price of an individual route.
+                .
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Skiplagged Flights</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This site <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  searches for inexpensive flights and shows</span> hidden-city ticketing trips in addition to flights on major search engines. Hidden-city flights require travelers to get off at the layover and then catch another flight.
+              </p>
+
+
+              <h2 class="px-3 py-4 lg:px-12 text-3xl my-4  font-medium lg:text-5xl text-violet-950 opacity-70">Group Travel Companies</h2>
+              <p class=" px-4  lg:px-12 text-lg">Using group travel companies to assemble your trip can alleviate all the stress of finding the information yourself. All-inclusive group packages and group travel tours offer new experiences and help you meet new people. These top travel websites are known for accommodating travel groups for adults:</p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Intrepid Travel</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> group takes you all over the world </span>in small group settings. It offers unique experiences and eco-conscious tours that are sustainable, yet memorable.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Atlas Obscura</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg"> <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> Atlas Obscura</span> specializes in curating unique trips based on interests. Its group travel is led by experts who understand the concept of done-for-you trips.
+
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">On The Go Tours</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  company specializes in travel groups for adults over 40</span> and has been in business for over 20 years. Its trips are tailored for individuals who want to meet other travelers and those who can appreciate authentic experiences. Everything is included and trips are led by expert guides.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Exodus Travels</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">Known for organizing great travel groups for adults over 50, <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  Exodus Travels </span>specializes in small group sizes and trips that accommodate different styles of travel and flexible booking conditions.
+              </p>
+              <p class="py-6 px-12  lg:px-20 text-lg">If you’re a solo traveler looking for a travel group to join, check out our curated list of <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">travel groups that a perfect for solo travelers.</span > </p>
+              <h2 class="px-3 py-4 lg:px-12 text-3xl my-4  font-medium lg:text-5xl text-violet-950 opacity-70">Best Travel Agency Websites</h2>
+              <p class=" px-4  lg:px-12 text-lg">Getting the best value for your money is key when dealing with travel agencies. It’s important to know what you want before jumping into an obligation. When it comes to choosing the best travel agencies to work with, consider their reputation, how quickly they respond, and if they can find the best pricing. Comparison shop before deciding.</p>
+              <p class=" px-4  lg:px-12 text-lg">You also want to work with an agency that has a flexible cancellation policy and deals that align with where you want to go. Some of the best travel agency websites include:</p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Booking</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg">This is the <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 ">  world’s largest booking website </span>with the ability to book entire trips from the hotel and airfare to the car. It’s also available in over 40 different languages with properties in 207 countries. Without a doubt, it is one of the best travel sites for packages.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Last Minute</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg"> <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> LastMinute.com</span> is one of the best travel sites for all-inclusive vacations if you feel like going on a spur-of-the-moment trip. One of the great things about this site is it has gift cards, payment plans, and extra entertainment bookings.
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Expedia</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg"> <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> Expedia</span> is still one of the most popular travel agency sites out there, with rewards for hotels and cars, luxury travel options, huge savings on packages, and more. When you’re looking for an all-in-one, Expedia should be on the list.
+
+              </p>
+              <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                <h5 class="text-lg opacity-95 font-medium">Hotwire</h5>
+            </div>
+               <p class=" px-4  lg:px-12 text-lg"> <span class="text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 "> Hotwire</span> has been around for over 20 years and can be great for travelers who just want a discount and don’t really care about the little details. Hotwire features lower prices when using the app.
+              </p>
+
+              <div class="px-4 mt-8 lg:mt-20 lg:px-12 flex flex-col gap-10 lg:flex-row lg:gap-24">
+                <div class="lg:w-1/3 lg:ml-10">
+                    <img src="./assets/img4.webp" alt="">
+                    </div>
+                    <div class="flex-col lg:w-2/3">
+                      <h2 class="px-3  lg:px-12 text-2xl lg:text-3xl  font-medium  text-violet-950 opacity-70">Be Sure to Explore These Related Resources:</h2>
+                      <div class="h-1 w-full bg-orange-600 mt-2"></div>
+                      <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">Travel Tips and Tricks </h5>
+                    </div>
+                    <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">2024 Travel Destinations</h5>
+                    </div>
+                    <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">Group Travel Packages </h5>
+                    </div>
+                    <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">Group Travel Tours</h5>
+                    </div>
+                    <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">Travel Abroad Programs </h5>
+                    </div>
+                    <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">Travel Groups for Solo Travelers</h5>
+                    </div>
+                    <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                        <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                        <h5 class="text-lg text-blue-700 hover:text-orange-600 transition ease-in-out delay-150 font-medium">How to Pack a Suitcase More Efficiently</h5>
+                    </div>
+
+                    </div>
+      
+              </div>
+              <div class="px-4 mt-10 lg:px-12  text-gray-500 space-y-4">
+                <p>KHE2FFFYH6SP-971744701-431</p>
+               <p> WorldTrips is a service company and a member of the Tokio Marine HCC group of companies.</p>
+               <p>WorldTrips’ Atlas Travel Series and StudentSecure international travel medical insurance products are underwritten by Lloyd's. WorldTrips has authority to enter into contracts of insurance on behalf of the Lloyd's underwriting members of Lloyd's Syndicate 4141, which is managed by HCC Underwriting Agency, Ltd.</p>
+               <p>WorldTrips' Atlas Journey, Atlas Cruiser, and Atlas On-The-Go trip protection insurance products are underwritten by Tokio Marine HCC's U.S. Specialty Insurance Company (USSIC). USSIC is a Texas-domiciled insurance company operating on an admitted basis throughout the United States. Coverage is available to U.S. residents of the U.S. states and District of Columbia only. This plan provides insurance coverage that only applies during the covered trip. You may have coverage from other sources that provides you with similar benefits but may be subject to different restrictions depending upon your other coverages. You may wish to compare the terms of this policy with your existing life, health, home, and automobile insurance policies. Coverage may not be available in all states.</p>
+               <p>n the State of California, operating as WorldTrips Insurance Services. California Non-Resident Producer License Number: 0G39705</p>
+              </div>
+
+
+            </div>
+            <div id="right" class=" lg:w-1/3 ">
+                <div class="px-4  lg:px-12 text-2xl font-bold mt-4 lg:text-3xl lg:font-bold">
+                    <h2>Blog Categories</h2>
+                </div>
+                <div class="h-1 px-4 lg:mx-12 bg-orange-600 mt-2"></div>
+                <div class="px-4 mt-4 lg:px-12  flex flex-row items-center gap-4">
+                    <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                    <h5 class="text-xl text-gray-800 hover:text-orange-600 transition ease-in-out delay-150 font-bold">
+                        How-to Guides</h5>
+                </div>
+                <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                    <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                    <h5 class="text-xl text-gray-800 hover:text-orange-600 transition ease-in-out delay-150 font-bold">
+                        Insurance Education</h5>
+                </div>
+                <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                    <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                    <h5 class="text-xl text-gray-800 hover:text-orange-600 transition ease-in-out delay-150 font-bold">
+                        Lists & Tips</h5>
+                </div>
+                <div class="px-4 mt-2 lg:px-12  flex flex-row items-center gap-4">
+                    <div class="h-2 w-2 rounded-full bg-gray-700 "></div>
+                    <h5 class="text-xl text-gray-800 hover:text-orange-600 transition ease-in-out delay-150 font-bold">
+                        Travel Guides</h5>
+                </div>
+
+                <div class="px-4  lg:px-12 text-2xl font-bold mt-10 lg:text-3xl lg:font-bold">
+                    <h2>Related Blog Posts</h2>
+                </div>
+                <div class="h-1  lg:mx-12 bg-orange-600 mt-2 "></div>
+                
+                    <div class="px-4  lg:px-12 my-4">
+                        <img src="./assets/img3.webp" alt="" class="rounded-lg my-2 lg:h-52">
+                    <h6 class="text-2xl font-bold mt-6 lg:text-3xl lg:font-bold px-6 opacity-75 hover:text-violet-950 transition ease-in-out delay-150"> What Is the Accidental Death Benefit in Travel Health Insurance?</h6>
+                        <p class="text-lg mt-4 px-6">An Accidental Death and Dismemberment (AD&D) benefit in travel health insurance is exactly what its name suggests: a benefit that provides coverage in...</p>
+                        <h4 class="w-full text-2xl font-bold bg-slate-200 px-6 mt-6 py-2 hover:text-orange-600 transition ease-in-out delay-150 rounded-lg">Read More</h4>
+                    </div>
+
+                        <div class="px-4  lg:px-12 my-8">
+                            <img src="./assets/img6.webp" alt="" class="rounded-lg my-2 lg:h-52">
+                        <h6 class="text-2xl font-bold mt-6 lg:text-3xl lg:font-bold px-6 opacity-75 hover:text-violet-950 transition ease-in-out delay-150"> Travel Medical Insurance Coverages You Might Not Be Aware Of</h6>
+                            <p class="text-lg mt-4 px-6">You may know that travel medical insurance can provide you with coverage in the event of a health emergency abroad. For example, if you fall and break...</p>
+                            <h4 class="w-full text-2xl font-bold bg-slate-200 px-6 mt-6 py-2 hover:text-orange-600 transition ease-in-out delay-150 rounded-lg">Read More</h4>
+                        </div>
+                        
+                            <div class="px-4  lg:px-12 my-8">
+                                <img src="./assets/img5.webp" alt="" class="rounded-lg my-2 lg:h-52">
+                            <h6 class="text-2xl font-bold mt-6 lg:text-3xl lg:font-bold px-6 opacity-75 hover:text-violet-950 transition ease-in-out delay-150"> Traveling to Japan for the First Time | Japan</h6>
+                                <p class="text-lg mt-4 px-6">information for planning your first trip to this wondrous destination. Overview of Japanese Culture Japanese culture is vastly different from most Western cultures...</p>
+                                <h4 class="w-full text-2xl font-bold bg-slate-200 px-6 mt-6 py-2 hover:text-orange-600 transition ease-in-out delay-150 rounded-lg">Read More</h4>
+                            </div>
+            </div>
+        </div>
+    </main>
+    <footer class="lg:mt-10">
+        <div class="px-4 bg-slate-200 py-6">
+            <div class=" flex flex-col justify-center items-center lg:flex-row lg:gap-5 ">
+                <span class="font-light text-lg">Also of Intrest</span>
+                <h6 class="text-lg font-medium">Websites to Find Jobs Overseas</h6>
+                <h6 class="text-lg font-medium">European Travel Guide</h6>
+                <h6 class="text-lg font-medium">Group Travel Insurance</h6>
+            </div>
+            <div class="flex flex-col  items-center lg:items-start  lg:flex-row lg:my-16">
+                <img src="./assets/img1.webp" alt="" class="h-32 ml-10">
+                <div class="hidden lg:block">
+                    <div class="flex gap-20 lg:w-full ml-48">
+                        <div class="flex flex-col">
+                            <span class="font-light text-lg">Insurance</span>
+                            <h6 class="font-medium text-lg">Travell Medical Insurance</h6>
+                            <h6 class="font-medium text-lg">Trip Insurance</h6>
+                            <h6 class="font-medium text-lg">International Student Insurance</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-light text-lg">Resources & Support</span>
+                            <h6 class="font-medium text-lg">Customer Resources</h6>
+                            <h6 class="font-medium text-lg">Travel Resources</h6>
+                            <h6 class="font-medium text-lg">Member Portal</h6>
+                            <h6 class="font-medium text-lg">FAQs</h6>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-light text-lg">Company</span>
+                            <h6 class="font-medium text-lg">About WorldTrips</h6>
+                            <h6 class="font-medium text-lg">Career</h6>
+                            <h6 class="font-medium text-lg">Contact Us</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex flex-col mx-10 text-xl font-light">
+                <h2 class="px-10">Follow Us</h2>
+                <div class="px-10 mt-2  text-4xl ">
+                    <i class="fa-brands fa-facebook hover:text-orange-600 transition ease-in-out delay-150 rounded-lg"></i>
+                    <i class="fa-brands fa-instagram hover:text-orange-600 transition ease-in-out delay-150 rounded-lg"></i>
+                    <i class="fa-brands fa-twitter hover:text-orange-600 transition ease-in-out delay-150 rounded-lg"></i>
+                    <i class="fa-brands fa-tiktok hover:text-orange-600 transition ease-in-out delay-150 rounded-lg"></i>
+                </div>
+                <h2 class="px-6 text-xl font-light ">Company</h2>
+
+            </div>
+            <div class="flex flex-col justify-center items-center my-10  lg:mb-6 lg:my-0">
+                <h2 class="text-lg font-medium">About World Trips</h2>
+                <h2 class="text-lg font-medium">Careers</h2>
+                <h2 class="text-lg font-medium">Contact Us</h2>
+            </div>
+            <div class="h-0.5 bg-gray-700 w-full"></div>
+            <div class="text-gray-950 font-light mt-6 flex flex-col items-center text-lg">
+                <span>Important Information | Privacy Policy | Cookie Policy</span>
+                <span>| Terms of Use | Sitemap</span>
+                <span>California Non-Resident Producer License Number:0G39705</span>
+            </div>
+        </div>
+       
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
